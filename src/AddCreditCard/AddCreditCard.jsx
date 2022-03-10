@@ -75,7 +75,7 @@ export default class AddCreditCard extends React.Component {
         return (
             <div key="Payment">
                 <div className="App-payment">
-                    <h1>Add Credit Cards</h1>
+                    <h1 className="text-center">Add Credit Cards</h1>
 
                     <Card
                         number={number}
@@ -143,16 +143,19 @@ export default class AddCreditCard extends React.Component {
                     </form>
                     {formData && (
                         <div className="App-highlight">
+                            <h3 className="text-center cardDetails">Card Details</h3>
                             {formatFormData(formData).map((d, i) => (
-                                <div key={i}>{d}</div>
+                                <div key={i}>
+                                    {d}
+                                </div>
                             ))}
                         </div>
                     )}
-                    <hr style={{ margin: "60px 0 30px" }} />
+
                     <hr style={{ margin: "30px 0" }} />
                     <SupportedCards />
                 </div>
-                {/* Try style */}
+
 
             </div>
         );

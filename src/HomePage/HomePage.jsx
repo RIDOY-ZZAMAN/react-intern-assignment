@@ -44,7 +44,7 @@ class HomePage extends React.Component {
                     <Link to="/login">Logout</Link>
                 </p>
 
-                <Link to={"/addcard"}><button className='btn btn-primary'>AddCard</button></Link>
+                <Link to={"/addcard"}><button className='btn btn-primary'>Add Credit Card</button></Link>
             </div>
         );
     }
