@@ -1,0 +1,22 @@
+.form-group{
+    width: 400px;
+    margin: 15px auto;
+    
+}
+
+.row{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   
+    
+}
+
+.col-6{
+    margin: 0 2px;
+}
+
+.pay-button{
+    width: 400px;
+    margin: 15px auto;
+}

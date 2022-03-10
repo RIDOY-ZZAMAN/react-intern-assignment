@@ -8,6 +8,7 @@ import { PrivateRoute } from '../_components';
 import { HomePage } from '../HomePage';
 import { LoginPage } from '../LoginPage';
 import { RegisterPage } from '../RegisterPage';
+import AddCreditCard from '../AddCreditCard/AddCreditCard';
 
 class App extends React.Component {
     constructor(props) {
@@ -33,6 +34,7 @@ class App extends React.Component {
                                 <PrivateRoute exact path="/" component={HomePage} />
                                 <Route path="/login" component={LoginPage} />
                                 <Route path="/register" component={RegisterPage} />
+                                <Route path="/addcard" component={AddCreditCard} />
                                 <Redirect from="*" to="/" />
                             </Switch>
                         </Router>

@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 
 import { userActions } from '../_actions';
 
+
+
 class HomePage extends React.Component {
     componentDidMount() {
         this.props.getUsers();
@@ -12,6 +14,8 @@ class HomePage extends React.Component {
     handleDeleteUser(id) {
         return (e) => this.props.deleteUser(id);
     }
+
+
 
     render() {
         const { user, users } = this.props;
@@ -29,8 +33,8 @@ class HomePage extends React.Component {
                                 {user.firstName + ' ' + user.lastName}
                                 {
                                     user.deleting ? <em> - Deleting...</em>
-                                    : user.deleteError ? <span className="text-danger"> - ERROR: {user.deleteError}</span>
-                                    : <span> - <a onClick={this.handleDeleteUser(user.id)}>Delete</a></span>
+                                        : user.deleteError ? <span className="text-danger"> - ERROR: {user.deleteError}</span>
+                                            : <span> - <a onClick={this.handleDeleteUser(user.id)}>Delete</a></span>
                                 }
                             </li>
                         )}
@@ -39,6 +43,8 @@ class HomePage extends React.Component {
                 <p>
                     <Link to="/login">Logout</Link>
                 </p>
+
+                <Link to={"/addcard"}><button className='btn btn-primary'>AddCard</button></Link>
             </div>
         );
     }
